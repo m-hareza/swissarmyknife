@@ -1,0 +1,42 @@
+package com.mhareza.jdd.collections.good.clients;
+
+import com.mhareza.jdd.collections.good.team.api.MultiBoardTeams;
+import com.mhareza.jdd.collections.good.team.api.TeamRepository;
+import com.mhareza.jdd.collections.good.team.domain.BoardId;
+import com.mhareza.jdd.collections.good.team.domain.Team;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class AlternateScenarioBusinessValueCalculator {
+
+	private final TeamRepository teamRepository;
+
+	public AlternateScenarioBusinessValueCalculator(TeamRepository teamRepository) {
+		this.teamRepository = teamRepository;
+	}
+
+	public BusinessValue calculateForReplacement(Set<BoardId> boardIds, Team teamToBeReplaced, Team replacement) {
+		///.............
+		Set<Team> teams = teamRepository.findTeams(boardIds).withReplacedTeam(teamToBeReplaced, replacement).distinct();
+		return calculateSomethingReallyImportant(teams);
+		///.............
+	}
+
+
+	public BusinessValue calculateForReplacement(BoardId boardId, Team teamToBeReplaced, Team replacement) {
+		///.............
+		List<Team> teams = teamRepository.findTeams(boardId).withReplacedTeam(teamToBeReplaced, replacement).stream().collect(Collectors.toList());
+		return calculateSomethingReallyImportant(teams);
+		///.............
+	}
+
+
+
+	private BusinessValue calculateSomethingReallyImportant(Collection<Team> teams) {
+		return null;
+	}
+
+
+}

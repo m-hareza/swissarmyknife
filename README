@@ -1,0 +1,8 @@
+1. Kolekcje - pomysły:
+	wiele miejsc gdzie odfiltrowuje się np. teamy które nie mają członków
+	wiele miejsc gzie jest takie samo sortowanie np. po nazwie
+	kilka miejsc które utrudniają refactoring
+
+
+2. VISITOR
+	pokazac, ze taka prosta polimorfia nie zadziała bo this to Goal
