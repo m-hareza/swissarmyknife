@@ -23,7 +23,7 @@ public class BoardResource {
 	public List<TeamDTO> findTeams(BoardId boardId, String phrase) {
 		final Teams teams = teamRepository.findTeams(boardId);
 		return teams
-				.findByName()
+				.findByName(phrase)
 				.orderByName()
 				.stream()
 				.map(TeamDTO::new)

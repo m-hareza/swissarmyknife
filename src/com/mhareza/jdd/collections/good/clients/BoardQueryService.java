@@ -18,7 +18,7 @@ public class BoardQueryService {
 	public List<Team> findByName(BoardId boardId, String phrase) {
 		final Teams teams = teamRepository.findTeams(boardId);
 		return teams
-				.findByName()
+				.findByName(phrase)
 				.stream()
 				.collect(Collectors.toList());
 	}

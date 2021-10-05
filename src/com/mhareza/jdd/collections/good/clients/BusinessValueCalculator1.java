@@ -2,6 +2,7 @@ package com.mhareza.jdd.collections.good.clients;
 
 import com.mhareza.jdd.collections.good.team.api.MultiBoardTeams;
 import com.mhareza.jdd.collections.good.team.api.TeamRepository;
+import com.mhareza.jdd.collections.good.team.api.Teams;
 import com.mhareza.jdd.collections.good.team.domain.BoardId;
 import com.mhareza.jdd.collections.good.team.domain.Team;
 import java.util.Set;
@@ -16,13 +17,12 @@ public class BusinessValueCalculator1 {
 
 	public void somePublicMethod(Set<BoardId> boardIds) {
 		///.............
-		final MultiBoardTeams teams = teamRepository.findTeams(boardIds);
-		final Set<Team> teamSet = teams.distinct();
-		calculateReallyImportantStuff(teamSet);
+		final Teams teams = teamRepository.findTeams(boardIds).distinct();
+		calculateReallyImportantStuff(teams);
 		///.............
 	}
 
-	private void calculateReallyImportantStuff(Set<Team> teams) {
+	private void calculateReallyImportantStuff(Teams teams) {
 
 	}
 }
