@@ -32,7 +32,7 @@ public class AlternateScenarioBusinessValueCalculator {
 			if (team.equals(teamToBeReplaced)) {
 				return replacement;
 			} else {
-				return replacement;
+				return team;
 			}
 		});
 		return calculateSomethingReallyImportant(new HashSet<>(teams));

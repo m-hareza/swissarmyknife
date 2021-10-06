@@ -20,7 +20,7 @@ public class AlternateScenarioBusinessValueCalculator {
 
 	public BusinessValue calculateForReplacement(Set<BoardId> boardIds, Team teamToBeReplaced, Team replacement) {
 		///.............
-		Teams teams = teamRepository.findTeams(boardIds).withReplacedTeam(teamToBeReplaced, replacement).distinct();
+		Teams teams = teamRepository.findTeams(boardIds).distinct().withReplacedTeam(teamToBeReplaced, replacement);
 		return calculateSomethingReallyImportant(teams);
 		///.............
 	}

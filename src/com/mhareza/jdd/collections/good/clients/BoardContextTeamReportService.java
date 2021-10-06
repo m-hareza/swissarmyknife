@@ -15,9 +15,7 @@ public class BoardContextTeamReportService {
 
 	TeamReport getReport(BoardId boardId, TeamId teamId) {
 		return teamRepository.findTeams(boardId)
-				.stream()
-				.filter(t -> t.getTeamId().equals(teamId))
-				.findFirst()
+				.findById(teamId)
 				.map(this::createReport)
 				.orElseGet(TeamReport::unknown);
 	}
