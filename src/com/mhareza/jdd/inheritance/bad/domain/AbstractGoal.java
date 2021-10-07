@@ -4,11 +4,11 @@ public abstract class AbstractGoal implements Goal {
 
 	private final GoalId id;
 
-	private final Value value;
+	private Value value;
 
-	private final User owner;
+	private User owner;
 
-	private final Status status;
+	private Status status;
 
 	public AbstractGoal(GoalId id, Value value, User owner, Status status) {
 		this.id = id;
@@ -34,5 +34,20 @@ public abstract class AbstractGoal implements Goal {
 	@Override
 	public Status getStatus() {
 		return status;
+	}
+
+	@Override
+	public void setValue(Value value) {
+		this.value = value;
+	}
+
+	@Override
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+
+	@Override
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 }

@@ -16,23 +16,28 @@ public class GoalDTOConverter {
 
 	GoalDTO toDTO(Goal goal) {
 		if (goal instanceof TaskBasedGoal taskBasedGoal) {
-			return new GoalDTO(
+			return new TaskBasedGoalDTO(
 					goal.getId().asString(),
-					getTaskName(taskBasedGoal.getTaskId()),
 					taskBasedGoal.getValue().asInt(),
 					new UserDTO(taskBasedGoal.getOwner()),
-					taskBasedGoal.getStatus()
+					taskBasedGoal.getStatus(),
+					getTaskDTO(taskBasedGoal.getTaskId())
 			);
 		} else if (goal instanceof HandWrittenGoal handWrittenGoal) {
-			return new GoalDTO(
+			return new HandWrittenGoalDTO(
 					goal.getId().asString(),
-					handWrittenGoal.getName().asString(),
 					handWrittenGoal.getValue().asInt(),
 					new UserDTO(handWrittenGoal.getOwner()),
-					handWrittenGoal.getStatus()
+					handWrittenGoal.getStatus(),
+					handWrittenGoal.getName().asString()
 			);
 		}
 		throw new IllegalArgumentException();
+	}
+
+	private TaskDTO getTaskDTO(TaskId taskId) {
+
+		return null;
 	}
 
 	private String getTaskName(TaskId taskId) {

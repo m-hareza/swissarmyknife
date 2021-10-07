@@ -35,4 +35,5 @@ public abstract class AbstractGoal implements Goal {
 	public Status getStatus() {
 		return status;
 	}
+
 }

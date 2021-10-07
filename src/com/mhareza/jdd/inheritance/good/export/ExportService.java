@@ -2,11 +2,11 @@ package com.mhareza.jdd.inheritance.good.export;
 
 import com.mhareza.jdd.inheritance.good.domain.Goal;
 import com.mhareza.jdd.inheritance.good.domain.GoalVisitor;
+import com.mhareza.jdd.inheritance.good.domain.Goals;
 import com.mhareza.jdd.inheritance.good.domain.HandWrittenGoal;
 import com.mhareza.jdd.inheritance.good.domain.TaskBasedGoal;
 import com.mhareza.jdd.inheritance.good.domain.TaskId;
 import com.mhareza.jdd.inheritance.good.domain.TaskRepository;
-import java.util.List;
 
 public class ExportService {
 
@@ -18,9 +18,9 @@ public class ExportService {
 		this.taskRepository = taskRepository;
 	}
 
-	public Spreadsheet exportGoals(List<Goal> goals) {
+	public Spreadsheet exportGoals(Goals goals) {
 		Spreadsheet spreadsheet = new Spreadsheet(HEADER);
-		goals.stream()
+		goals
 				.map(this::toRow)
 				.forEach(spreadsheet::add);
 		return spreadsheet;

@@ -1,4 +1,4 @@
-package com.mhareza.jdd.inheritance.bad.domain;
+package com.mhareza.jdd.inheritance.good.domain;
 
 import java.util.List;
 import java.util.function.Function;

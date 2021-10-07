@@ -2,23 +2,12 @@ package com.mhareza.jdd.inheritance.bad.rest;
 
 import com.mhareza.jdd.inheritance.bad.domain.Status;
 
-public class GoalDTO {
+public class TaskBasedGoalDTO extends GoalDTO {
 
-	public String id;
+	public TaskDTO taskDTO;
 
-	public String label;
-
-	public Integer businessValue;
-
-	public UserDTO user;
-
-	public Status status;
-
-	public GoalDTO(String id, String label, Integer businessValue, UserDTO user, Status status) {
-		this.id = id;
-		this.label = label;
-		this.businessValue = businessValue;
-		this.user = user;
-		this.status = status;
+	public TaskBasedGoalDTO(String id, Integer businessValue, UserDTO user, Status status, TaskDTO taskDTO) {
+		super(id, businessValue, user, status);
+		this.taskDTO = taskDTO;
 	}
 }

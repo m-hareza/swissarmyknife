@@ -7,6 +7,15 @@ import com.mhareza.jdd.inheritance.good.domain.TaskBasedGoal;
 
 public class GoalStorage {
 
+	private final HandWrittenGoalDao handWrittenGoalDao;
+
+	private final TaskBasedGoalDao taskBasedGoalDao;
+
+	public GoalStorage(HandWrittenGoalDao handWrittenGoalDao, TaskBasedGoalDao taskBasedGoalDao) {
+		this.handWrittenGoalDao = handWrittenGoalDao;
+		this.taskBasedGoalDao = taskBasedGoalDao;
+	}
+
 	public void save(Goal goal) {
 		goal.accept(new GoalVisitor<Void>() {
 			@Override
@@ -24,11 +33,11 @@ public class GoalStorage {
 	}
 
 	private void save(TaskBasedGoal goal) {
-		//saveToTableA(goal);
+		taskBasedGoalDao.save(goal);
 	}
 
 	private void save(HandWrittenGoal goal) {
-		//saveToTableB(goal);
+		handWrittenGoalDao.save(goal);
 	}
 
 }

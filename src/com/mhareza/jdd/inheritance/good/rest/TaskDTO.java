@@ -1,4 +1,4 @@
-package com.mhareza.jdd.inheritance.bad.rest;
+package com.mhareza.jdd.inheritance.good.rest;
 
 public class TaskDTO {
 

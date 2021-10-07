@@ -1,6 +1,6 @@
-package com.mhareza.jdd.inheritance.bad.rest;
+package com.mhareza.jdd.inheritance.good.rest;
 
-import com.mhareza.jdd.inheritance.bad.domain.GoalRepository;
+import com.mhareza.jdd.inheritance.good.domain.GoalRepository;
 import java.util.List;
 
 public class RestResource {
@@ -16,7 +16,7 @@ public class RestResource {
 
 	public List<GoalDTO> getGoals() {
 		return goalRepository.getGoals()
-				.map(goalDTOConverter::toDTO);
+				.map(goal -> goal.accept(goalDTOConverter));
 
 	}
 

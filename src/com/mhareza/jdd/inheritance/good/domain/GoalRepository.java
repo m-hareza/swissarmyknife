@@ -1,4 +1,4 @@
-package com.mhareza.jdd.inheritance.bad.domain;
+package com.mhareza.jdd.inheritance.good.domain;
 
 public class GoalRepository {
 

@@ -16,24 +16,28 @@ public class GoalDTOConverter implements GoalVisitor<GoalDTO> {
 
 	@Override
 	public GoalDTO visit(HandWrittenGoal goal) {
-		return new GoalDTO(
+		return new HandWrittenGoalDTO(
 				goal.getId().asString(),
-				goal.getName().asString(),
 				goal.getValue().asInt(),
 				new UserDTO(goal.getOwner()),
-				goal.getStatus()
+				goal.getStatus(),
+				goal.getName().asString()
 		);
 	}
 
 	@Override
 	public GoalDTO visit(TaskBasedGoal goal) {
-		return new GoalDTO(
+		return new TaskBasedGoalDTO(
 				goal.getId().asString(),
-				getTaskName(goal.getTaskId()),
 				goal.getValue().asInt(),
 				new UserDTO(goal.getOwner()),
-				goal.getStatus()
+				goal.getStatus(),
+				getTaskDTO(goal.getTaskId())
 		);
+	}
+
+	private TaskDTO getTaskDTO(TaskId taskId) {
+		return null;
 	}
 
 	private String getTaskName(TaskId taskId) {

@@ -10,4 +10,10 @@ public interface Goal {
 
 	Status getStatus();
 
+	void setValue(Value value);
+
+	void setOwner(User owner);
+
+	void setStatus(Status status);
+
 }

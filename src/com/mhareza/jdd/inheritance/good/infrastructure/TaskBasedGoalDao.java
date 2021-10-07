@@ -1,6 +1,6 @@
-package com.mhareza.jdd.inheritance.bad.infrastructure;
+package com.mhareza.jdd.inheritance.good.infrastructure;
 
-import com.mhareza.jdd.inheritance.bad.domain.TaskBasedGoal;
+import com.mhareza.jdd.inheritance.good.domain.TaskBasedGoal;
 
 public class TaskBasedGoalDao {
 

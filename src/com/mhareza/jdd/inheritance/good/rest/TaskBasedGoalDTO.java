@@ -1,6 +1,6 @@
-package com.mhareza.jdd.inheritance.bad.rest;
+package com.mhareza.jdd.inheritance.good.rest;
 
-import com.mhareza.jdd.inheritance.bad.domain.Status;
+import com.mhareza.jdd.inheritance.good.domain.Status;
 
 public class TaskBasedGoalDTO extends GoalDTO {
 
