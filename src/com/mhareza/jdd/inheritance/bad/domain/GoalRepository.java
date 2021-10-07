@@ -1,9 +1,7 @@
 package com.mhareza.jdd.inheritance.bad.domain;
 
-public class GoalRepository {
+public interface GoalRepository {
 
-	public Goals getGoals() {
-		return null;
-	}
+	Goals getGoals();
 
 }

@@ -1,8 +1,8 @@
-package com.mhareza.jdd.factories.good;
+package com.mhareza.jdd.untangling.good;
 
-import com.mhareza.jdd.factories.bad.ObjectId;
-import com.mhareza.jdd.factories.bad.Result;
-import com.mhareza.jdd.factories.bad.SecurityService;
+import com.mhareza.jdd.untangling.bad.ObjectId;
+import com.mhareza.jdd.untangling.bad.Result;
+import com.mhareza.jdd.untangling.bad.SecurityService;
 import java.util.Optional;
 
 public class SecuredAction implements Action {

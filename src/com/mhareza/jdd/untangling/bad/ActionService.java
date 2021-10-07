@@ -1,4 +1,4 @@
-package com.mhareza.jdd.factories.bad;
+package com.mhareza.jdd.untangling.bad;
 
 import java.util.Optional;
 import java.util.logging.Level;
@@ -32,10 +32,10 @@ public class ActionService {
 			return Optional.empty();
 		}
 		securityService.checkPrivileges(request.getObjectId());
-		final Optional<Result> perform = perform(request.getObjectId(), request.getData());
+		final Optional<Result> result = perform(request.getObjectId(), request.getData());
 		long finish = System.nanoTime();
 		logTimeElapsed(finish, start);
-		return perform;
+		return result;
 	}
 
 	private void logTimeElapsed(long finish, long start) {
@@ -43,8 +43,8 @@ public class ActionService {
 	}
 
 	private Optional<Result> perform(ObjectId objectId, Data data) {
-		ObjectX objectX = objectRepository.get(objectId);
-		return objectX.perform(data);
+//		... really hard calculation .../
+		return null;
 	}
 
 	private boolean actionIsDisabled(Request request) {

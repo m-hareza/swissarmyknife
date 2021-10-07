@@ -1,4 +1,4 @@
-package com.mhareza.jdd.factories.bad;
+package com.mhareza.jdd.untangling.bad;
 
 public class ActionLoggingService {
 

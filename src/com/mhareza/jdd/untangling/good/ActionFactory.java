@@ -1,9 +1,9 @@
-package com.mhareza.jdd.factories.good;
+package com.mhareza.jdd.untangling.good;
 
-import com.mhareza.jdd.factories.bad.ActionAvailabilityService;
-import com.mhareza.jdd.factories.bad.ObjectRepository;
-import com.mhareza.jdd.factories.bad.Request;
-import com.mhareza.jdd.factories.bad.SecurityService;
+import com.mhareza.jdd.untangling.bad.ActionAvailabilityService;
+import com.mhareza.jdd.untangling.bad.ObjectRepository;
+import com.mhareza.jdd.untangling.bad.Request;
+import com.mhareza.jdd.untangling.bad.SecurityService;
 import java.util.logging.Logger;
 
 public class ActionFactory {

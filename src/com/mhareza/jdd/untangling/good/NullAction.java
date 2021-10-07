@@ -1,6 +1,6 @@
-package com.mhareza.jdd.factories.good;
+package com.mhareza.jdd.untangling.good;
 
-import com.mhareza.jdd.factories.bad.Result;
+import com.mhareza.jdd.untangling.bad.Result;
 import java.util.Optional;
 
 public class NullAction implements Action {
