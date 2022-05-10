@@ -1,10 +1,10 @@
 package com.mhareza.jdd.spoi.good;
 
-public class SchedulerTypeId {
+public class ClassifierTypeId {
 
 	private final String id;
 
-	public SchedulerTypeId(String id) {
+	public ClassifierTypeId(String id) {
 		this.id = id;
 	}
 }

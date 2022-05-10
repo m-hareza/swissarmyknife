@@ -1,6 +1,6 @@
 package com.mhareza.jdd.spoi.good;
 
-public interface SchedulerConfigurationConverter<T extends SchedulerConfiguration> { ;
+public interface ClassifierConfigurationConverter<T extends ClassifierConfiguration> { ;
 
 	T toConfiguration(String json);
 

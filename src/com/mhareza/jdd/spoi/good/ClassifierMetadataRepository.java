@@ -1,6 +1,6 @@
 package com.mhareza.jdd.spoi.good;
 
-public interface SchedulerMetadataRepository {
+public interface ClassifierMetadataRepository {
 
 	String getName();
 
