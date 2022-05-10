@@ -1,8 +1,0 @@
-package com.mhareza.jdd.untangling.bad;
-
-public class ActionAvailabilityService {
-
-	public boolean isActionAvailable(ObjectId objectId) {
-		return false;
-	}
-}
